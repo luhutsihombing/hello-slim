@@ -15,6 +15,13 @@ $app->get('/:nama/:panjang', function ($nama, $panjang) {
     echo "<h1>" . $nama . " " . $panjang . "</h1>";
 });
 
+# Penggunaan Fungsi Route nanti disini
+$app->get('/tes', 'getTes');
+
+function getTes() {
+	echo 'Hello Slim from Tes';
+}
+
 # Eksekusi Program
 $app->run();
 
